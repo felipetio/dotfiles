@@ -1,0 +1,12 @@
+*.sw[ponm]
+*.o
+*.pyc
+.DS_Store
+#*#
+*.orig
+*.rej
+*.log
+log/*.log
+
+# Vim Obsession plugin
+Session.vim
