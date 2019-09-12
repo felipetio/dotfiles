@@ -1,30 +1,26 @@
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[difftool "vimdiff"]
+	cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
 [user]
 	name = Felipe Vieira
-	email = felipe@grubster.com.br
+	email = me@felipet.io
 [pull]
 	rebase = true
 [http]
-    sslVerify = false
+	sslVerify = false
 [core]
-    excludesfile = ~/.gitexclude
-    trustctime = false
+	excludesfile = ~/.gitexclude
+	trustctime = false
 [alias]
-    st = status -sb
-    up = fetch -ap
-    ci = commit
-    br = branch
-    go = checkout
-    rb = rebase
-    lg = log --oneline --decorate --all --graph --stat
-    di = diff
-    dif = diff
-    dica = diff --cached
-    difca = diff --cached
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	st = status -sb
+	up = fetch -ap
+	ci = commit
+	br = branch
+	go = checkout
+	rb = rebase
+	lg = log --oneline --decorate --all --graph --stat
+	df = diff
+	dfa = diff --cached
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[content]
+	editor = vim -w

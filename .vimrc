@@ -11,11 +11,6 @@ au BufWrite /private/tmp/crontab.* set nowritebackup
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup
 
-" set our tabs to two spaces
-autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
-
 " supports 256-color terminal
 set t_Co=256
 
@@ -31,14 +26,12 @@ set backspace=indent,eol,start
 " always use utf-8
 set encoding=utf-8
 
-"Configure status line"
-set statusline=%(%F%m%r%h%w\ [%Y]\ %{&encoding}\ %)%=%(%l,%v\ %LL\ %p%%%)
-
 " make the last line where the status is two lines deep so you can see status always
 set laststatus=2
 
 " auto indent
 set ai
+filetype plugin indent on
 
 " do not put a cr at the end of the file. this will result in headers sent if you do web programming
 set binary noeol
@@ -57,3 +50,13 @@ set hidden
 
 "disable beep and flash
 set noeb vb t_vb=
+
+call plug#begin('~/.vim/bundle')
+  Plug 'pappasam/vim-filetype-formatter'
+  Plug 'nvie/vim-flake8'
+  Plug 'itchyny/lightline.vim'
+  Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-fugitive'
+call plug#end()
+
+command Gdiff Gvdiff

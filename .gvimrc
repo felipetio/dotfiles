@@ -6,14 +6,18 @@ set guifont=Monaco:h12
 " show line numbers
 set nu
 
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-augroup ProjectDrawer
+augroup NERD
   autocmd!
-  autocmd VimEnter * :Vexplore
+  autocmd VimEnter * call s:CheckToOpenNERDTree()
+  autocmd VimEnter * wincmd l
 augroup END
 
-autocmd VimEnter * wincmd l
+function! s:CheckToOpenNERDTree() abort
+    "dont open a tree for diff
+    if &diff | return | endif
+
+    "dont open a tree for gitcommits
+    if &ft == 'gitcommit' | return | endif
+
+    NERDTree
+endfunction
