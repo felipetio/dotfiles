@@ -57,6 +57,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'itchyny/lightline.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-fugitive'
+  Plug 'scrooloose/nerdtree'
 call plug#end()
 
 command Gdiff Gvdiff

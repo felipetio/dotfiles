@@ -1,7 +1,7 @@
 " set digerati as defaultcolor schema
 colorscheme digerati
 
-set guifont=Monaco:h12
+set guifont=Monaco:h14
 
 " show line numbers
 set nu
