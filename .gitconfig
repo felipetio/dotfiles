@@ -10,6 +10,7 @@
 [core]
 	excludesfile = ~/.gitexclude
 	trustctime = false
+	editor = mvim -f
 [alias]
 	st = status -sb
 	up = fetch -ap
@@ -23,4 +24,4 @@
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [content]
-	editor = vim -w
+	editor = mvim -f

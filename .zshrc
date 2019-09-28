@@ -101,20 +101,21 @@ alias vim="mvim"
 alias vimdiff="mvimdiff"
 
 # Customize to your needs...
-export PATH=$PATH:/Users/felipe/.rvm/gems/ruby-2.0.0-p247/bin:/Users/felipe/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/felipe/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/felipe/.rvm/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/mysql/bin
-export ANDROID_HOME=/Users/felipe/Library/Android/sdk
-export PATH=$PATH:/Users/felipe/PredictionIO/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/Applications/MacVim.app/Contents/bin/
-
+export PATH=$PATH:/Applications/MacVim.app/Contents/bin/
+export PATH="/usr/local/bin:$PATH" # set git from brew
 export PATH="/usr/local/opt/python/libexec/bin:/usr/local/sbin:$PATH" # set python3 as the default version of python
-
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Projects
-source /usr/local/bin/virtualenvwrapper.sh
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export PROJECT_HOME=$HOME/Projects
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
 
 PATH="/Users/felipe/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/felipe/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/Users/felipe/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/Users/felipe/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/felipe/perl5"; export PERL_MM_OPT;
+export PATH="/usr/local/opt/node@10/bin:$PATH"
+
+# Created by `userpath` on 2019-09-24 23:15:28
+export PATH="$PATH:/Users/felipe/.local/bin"

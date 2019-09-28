@@ -58,6 +58,9 @@ call plug#begin('~/.vim/bundle')
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-fugitive'
   Plug 'scrooloose/nerdtree'
+  Plug 'psf/black'
 call plug#end()
 
 command Gdiff Gvdiff
+
+autocmd BufWritePre *.py execute ':Black'
