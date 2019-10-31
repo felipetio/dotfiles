@@ -98,8 +98,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="mvim"
-alias vimdiff="mvimdiff"
 
 # Customize to your needs...
 export PATH=$PATH:/Applications/MacVim.app/Contents/bin/
@@ -109,7 +107,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export PROJECT_HOME=$HOME/Projects
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
 
 PATH="/Users/felipe/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/felipe/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -120,3 +118,18 @@ export PATH="/usr/local/opt/node@10/bin:$PATH"
 
 # Created by `userpath` on 2019-09-24 23:15:28
 export PATH="$PATH:/Users/felipe/.local/bin"
+
+function auto_pipenv_shell {
+    if [ ! -n "${PIPENV_ACTIVE+1}" ]; then
+        if [ -f "Pipfile" ] ; then
+            pipenv shell
+        fi
+    fi
+}
+
+function cd {
+    builtin cd "$@"
+    auto_pipenv_shell
+}
+
+auto_pipenv_shell

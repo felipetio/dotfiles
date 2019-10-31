@@ -1,3 +1,6 @@
+" Set digerati as defaultcolor schema
+colorscheme digerati
+
 " Configuration file for vim
 set modelines=0		" CVE-2007-2438
 
@@ -6,9 +9,9 @@ set modelines=0		" CVE-2007-2438
 set nocompatible	" Use Vim defaults instead of 100% vi compatibility
 set backspace=2		" more powerful backspacing
 
-" Don't write backup file if vim is being called by "crontab -e"
+" Dont write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup
-" Don't write backup file if vim is being called by "chpass"
+" Dont write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup
 
 " supports 256-color terminal
@@ -40,7 +43,7 @@ set binary noeol
 set showmatch
 
 " highlight search terms
-set hlsearch      
+set hlsearch
 
 " show search matches as you type
 set incsearch
@@ -58,9 +61,16 @@ call plug#begin('~/.vim/bundle')
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-fugitive'
   Plug 'scrooloose/nerdtree'
-  Plug 'psf/black'
+  Plug 'psf/black', { 'tag': '19.3b0' }
+  Plug 'prettier/vim-prettier'
 call plug#end()
 
 command Gdiff Gvdiff
 
 autocmd BufWritePre *.py execute ':Black'
+
+" folding
+set foldmethod=indent
+set foldlevel=99	" do not fold when open a file
+nnoremap <space> za
+vnoremap <space> zf

@@ -10,3 +10,6 @@ log/*.log
 
 # Vim Obsession plugin
 Session.vim
+
+# it should be only for ~/Projects/dashboard folder :/
+Pipfile

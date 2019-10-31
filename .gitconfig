@@ -1,5 +1,6 @@
 [difftool "vimdiff"]
 	cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
+	path =
 [user]
 	name = Felipe Vieira
 	email = me@felipet.io
@@ -8,9 +9,9 @@
 [http]
 	sslVerify = false
 [core]
-	excludesfile = ~/.gitexclude
+	excludesfile = /Users/felipe/.gitexclude
 	trustctime = false
-	editor = mvim -f
+	editor = vim -f
 [alias]
 	st = status -sb
 	up = fetch -ap
@@ -23,5 +24,9 @@
 	dfa = diff --cached
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-[content]
-	editor = mvim -f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
