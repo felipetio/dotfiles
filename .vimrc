@@ -60,17 +60,20 @@ call plug#begin('~/.vim/bundle')
   Plug 'itchyny/lightline.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-fugitive'
-  Plug 'scrooloose/nerdtree'
-  Plug 'psf/black', { 'tag': '19.3b0' }
   Plug 'prettier/vim-prettier'
 call plug#end()
 
 command Gdiff Gvdiff
-
-autocmd BufWritePre *.py execute ':Black'
 
 " folding
 set foldmethod=indent
 set foldlevel=99	" do not fold when open a file
 nnoremap <space> za
 vnoremap <space> zf
+
+" quote/unquote
+nnoremap <Leader>qq ciw""<Esc>P
+nnoremap <Leader>q ciw''<Esc>P
+nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
+
+nnoremap gb :ls<CR>:b<Space>

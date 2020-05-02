@@ -1,6 +1,6 @@
 " Maintainer:	Henrique C. Alves (hcarvalhoalves@gmail.com)
-" Version:      1.0
-" Last Change:  October 05 2008
+" Version:      1.1
+" Last Change:  January 02 2020
 
 set background=dark
 
