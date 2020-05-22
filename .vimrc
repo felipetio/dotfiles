@@ -54,6 +54,9 @@ set hidden
 "disable beep and flash
 set noeb vb t_vb=
 
+"set spell checking lang
+set spelllang=en_us
+
 call plug#begin('~/.vim/bundle')
   Plug 'pappasam/vim-filetype-formatter'
   Plug 'nvie/vim-flake8'
@@ -77,3 +80,14 @@ nnoremap <Leader>q ciw''<Esc>P
 nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
 
 nnoremap gb :ls<CR>:b<Space>
+
+augroup SPELL
+  autocmd!
+  autocmd VimEnter * call s:CheckToSetSpell()
+  autocmd VimEnter * wincmd l
+augroup END
+
+function! s:CheckToSetSpell() abort
+    "set spell check for gitcommits
+    if &ft == 'gitcommit' | set spell | endif
+endfunction

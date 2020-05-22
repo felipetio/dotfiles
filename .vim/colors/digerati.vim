@@ -57,3 +57,9 @@ hi htmlLink		ctermfg=204 cterm=underline 		guifg=#ff3b77 gui=underline
 
 " Nerdtree
 hi Directory		ctermfg=74  ctermbg=NONE cterm=NONE	guifg=#72b4c7 guibg=NONE gui=NONE
+
+"SpellBad
+hi SpellBad 		ctermfg=124 ctermbg=NONE cterm=underline,bold guifg=#FF0000 guibg=NONE gui=undercurl,bold
+hi SpellCap 		ctermfg=3 ctermbg=NONE cterm=underline,bold guifg=#FFFF00 guibg=NONE gui=undercurl,bold
+hi SpellLocal 		ctermfg=3 ctermbg=NONE cterm=underline,bold guifg=#FFFF00 guibg=NONE gui=undercurl,bold
+hi SpellRare 		ctermfg=3 ctermbg=NONE cterm=underline,bold guifg=#FFFF00 guibg=NONE gui=undercurl,bold
