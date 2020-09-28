@@ -102,12 +102,12 @@ fi
 # Customize to your needs...
 export PATH=$PATH:/Applications/MacVim.app/Contents/bin/
 export PATH="/usr/local/bin:$PATH" # set git from brew
-export PATH="/usr/local/opt/python/libexec/bin:/usr/local/sbin:$PATH" # set python3 as the default version of python
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export PROJECT_HOME=$HOME/Projects
 export WORKON_HOME=$HOME/.virtualenvs
-#source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON==$(pyenv root)/shims/python
+source /usr/local/bin/virtualenvwrapper.sh
 
 PATH="/Users/felipe/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/felipe/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -118,6 +118,9 @@ export PATH="/usr/local/opt/node@12/bin:$PATH"
 
 # Created by `userpath` on 2019-09-24 23:15:28
 export PATH="$PATH:/Users/felipe/.local/bin"
+
+# Use pyenv to load python bin
+PATH=$(pyenv root)/shims:$PATH
 
 function auto_pipenv_shell {
     if [ ! -n "${PIPENV_ACTIVE+1}" ]; then
@@ -135,3 +138,6 @@ function cd {
 auto_pipenv_shell
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export ENV_FILE=$PROJECT_HOME/bofa-appserver/Env.properties
+export KEY_FILE=$PROJECT_HOME/bofa-appserver/ccfKeyfile.properties
