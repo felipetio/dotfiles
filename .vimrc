@@ -57,16 +57,33 @@ set noeb vb t_vb=
 "set spell checking lang
 set spelllang=en_us
 
+" add a horizontal indicator to break lines
+set colorcolumn=88
+
 call plug#begin('~/.vim/bundle')
   Plug 'pappasam/vim-filetype-formatter'
   Plug 'nvie/vim-flake8'
   Plug 'itchyny/lightline.vim'
-  Plug 'scrooloose/nerdtree'
+  Plug 'preservim/nerdtree'
   Plug 'tpope/vim-fugitive'
   Plug 'prettier/vim-prettier'
   Plug 'easymotion/vim-easymotion'
   Plug 'JamshedVesuna/vim-markdown-preview'
+  Plug 'goerz/jupytext.vim'
+  Plug 'APZelos/blamer.nvim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
+
+nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
+
+" fzf.vim is hanging
+ nmap <Leader>f :GFiles<CR>
+ nmap <Leader>F :Files<CR>
+ nmap <Leader>l :BLines<CR>
+ nmap <Leader>L :Lines<CR>
+
+nmap <Leader>/ :Rg<Space>
 
 command Gdiff Gvdiff
 
@@ -87,7 +104,7 @@ nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
 nnoremap gb :ls<CR>:b<Space>
 
 " delete buffer without losing the split window
-command Bd bp\|bd \#
+"command Bd :call <SID>Kwbd(1)<CR>:<BS>
 
 augroup SPELL
   autocmd!

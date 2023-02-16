@@ -1,0 +1,125 @@
+{
+  "name" : "(default)",
+  "entries" : {
+    "1356:2508:1~Axis 3~High" : {
+      "speed" : 29,
+      "type" : "mouse scroll",
+      "smooth" : true,
+      "direction" : 2
+    },
+    "1356:2508:1~Axis 6~Low" : {
+      "type" : "key press",
+      "key" : 55
+    },
+    "1356:2508:1~Axis 4~Low" : {
+      "speed" : 29,
+      "type" : "mouse scroll",
+      "smooth" : true,
+      "direction" : 1
+    },
+    "1356:2508:1~Axis 2~Low" : {
+      "type" : "mouse move",
+      "axis" : 2,
+      "speed" : 20
+    },
+    "1356:2508:1~Button 1" : {
+      "type" : "key press",
+      "key" : 49
+    },
+    "1356:2508:1~Axis 1~High" : {
+      "type" : "mouse move",
+      "axis" : 1,
+      "speed" : 20
+    },
+    "1356:2508:1~Button 2" : {
+      "type" : "mouse button",
+      "button" : 0
+    },
+    "1356:2508:1~Button 3" : {
+      "type" : "mouse button",
+      "button" : 1
+    },
+    "1356:2508:1~Button 4" : {
+      "type" : "key press",
+      "key" : 36
+    },
+    "1356:2508:1~Button 5" : {
+      "type" : "key press",
+      "key" : 53
+    },
+    "1356:2508:1~Button 6" : {
+      "type" : "key press",
+      "key" : 58
+    },
+    "1356:2508:1~Button 9" : {
+      "type" : "key press",
+      "key" : 103
+    },
+    "1356:2508:1~Hat Switch 1~Down" : {
+      "type" : "key press",
+      "key" : 125
+    },
+    "1356:2508:1~Axis 5~Low" : {
+      "type" : "key press",
+      "key" : 48
+    },
+    "1356:2508:1~Button 10" : {
+      "type" : "key press",
+      "key" : 118
+    },
+    "1356:2508:1~Axis 3~Low" : {
+      "speed" : 29,
+      "type" : "mouse scroll",
+      "smooth" : true,
+      "direction" : -2
+    },
+    "1356:2508:1~Axis 1~Low" : {
+      "type" : "mouse move",
+      "axis" : 0,
+      "speed" : 20
+    },
+    "1356:2508:1~Axis 4~High" : {
+      "speed" : 29,
+      "type" : "mouse scroll",
+      "smooth" : true,
+      "direction" : -1
+    },
+    "1356:2508:1~Button 11" : {
+      "type" : "mouse button",
+      "button" : 0
+    },
+    "1356:2508:1~Axis 6~High" : {
+      "type" : "key press",
+      "key" : 55
+    },
+    "1356:2508:1~Button 12" : {
+      "type" : "mouse button",
+      "button" : 1
+    },
+    "1356:2508:1~Axis 2~High" : {
+      "type" : "mouse move",
+      "axis" : 3,
+      "speed" : 20
+    },
+    "1356:2508:1~Hat Switch 1~Right" : {
+      "type" : "key press",
+      "key" : 124
+    },
+    "1356:2508:1~Button 13" : {
+      "type" : "key press",
+      "key" : 96
+    },
+    "1356:2508:1~Button 14" : {
+      "type" : "key press",
+      "key" : 97
+    },
+    "1356:2508:1~Hat Switch 1~Left" : {
+      "type" : "key press",
+      "key" : 123
+    },
+    "1356:2508:1~Hat Switch 1~Up" : {
+      "type" : "key press",
+      "key" : 126
+    }
+  }
+}

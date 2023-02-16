@@ -68,7 +68,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,6 +99,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias psql_raw="psql -qAtX -F $'\t'"
+alias tm_dash="sh /Users/felipe/tmux-dashboard.sh"
+
 # Customize to your needs...
 export PATH=$PATH:/Applications/MacVim.app/Contents/bin/
 export PATH="/usr/local/bin:$PATH" # set git from brew
@@ -114,7 +117,6 @@ PERL5LIB="/Users/felipe/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5L
 PERL_LOCAL_LIB_ROOT="/Users/felipe/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/Users/felipe/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/felipe/perl5"; export PERL_MM_OPT;
-export PATH="/usr/local/opt/node@12/bin:$PATH"
 
 # Created by `userpath` on 2019-09-24 23:15:28
 export PATH="$PATH:/Users/felipe/.local/bin"
@@ -139,5 +141,19 @@ auto_pipenv_shell
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-export ENV_FILE=$PROJECT_HOME/bofa-appserver/Env.properties
-export KEY_FILE=$PROJECT_HOME/bofa-appserver/ccfKeyfile.properties
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH=$PATH:/usr/local/sbin
+export PATH="/usr/local/opt/node@14/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+
+# pnpm
+export PNPM_HOME="/Users/felipe/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
