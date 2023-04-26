@@ -73,6 +73,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'APZelos/blamer.nvim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  Plug 'github/copilot.vim'
 call plug#end()
 
 nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>

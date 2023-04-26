@@ -3,6 +3,9 @@ set guifont=Monaco:h16
 " show line numbers
 set nu
 
+" use the mac meta key
+set macmeta
+
 augroup NERD
   autocmd!
   autocmd VimEnter * call s:CheckToOpenNERDTree()
