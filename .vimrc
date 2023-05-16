@@ -9,6 +9,12 @@ set modelines=0		" CVE-2007-2438
 set nocompatible	" Use Vim defaults instead of 100% vi compatibility
 set backspace=2		" more powerful backspacing
 
+" Enable mouse and trackpad support
+set mouse=a
+
+" Enable clipboard support
+set clipboard+=unnamedplus
+
 " Dont write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup
 " Dont write backup file if vim is being called by "chpass"
@@ -105,7 +111,7 @@ nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
 nnoremap gb :ls<CR>:b<Space>
 
 " delete buffer without losing the split window
-"command Bd :call <SID>Kwbd(1)<CR>:<BS>
+command Bd :call <SID>Kwbd(1)<CR>:<BS>
 
 augroup SPELL
   autocmd!
